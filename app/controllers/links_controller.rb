@@ -1,6 +1,6 @@
 class LinksController < ApplicationController
   def linkpreview
-    @url = 'https://lenta.ru/'
+    @url = params[:url]
     preview = LinkPreviewParser.parse(@url)
 
     render :json => preview
