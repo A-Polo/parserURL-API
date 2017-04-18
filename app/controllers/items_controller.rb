@@ -3,7 +3,8 @@ class ItemsController < BaseController
     render json: Item.all
   end
   def create
-    respond_with Item.create(item_params)
+    @item = Item.create!(item_params)
+    render json: @item
   end
 
   def item_params
