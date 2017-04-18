@@ -1,0 +1,1 @@
+Parser::Application.config.secret_key_base = '3d8ef1d3b670c40fe4ae25a451051bee1e36023459dd1fd51c0b2c10e11bd4ad9d4c04c07b8e9f80c4a3e67c0e7f8814de2d0a3883de7f2c390fd2391436ca51'
