@@ -1,7 +1,11 @@
 class LinkPreviewParser
+  require 'nokogiri'
   require 'open-uri'
+  require 'openssl'
+
   def self.parse(url)
-    doc = Nokogiri::HTML(open(url,ssl_verify_mode: OpenSSL::SSL::VERIFY_NONE))
+    content = open(url, ssl_verify_mode: OpenSSL::SSL::VERIFY_NONE, 'User-Agent' => 'opera')
+    doc = Nokogiri::HTML(open(content))
     page_info = {}
     doc.at('meta[property="og:title"]').nil? ? nil :  page_info[:meta_title] =  doc.css('title').text
     page_info[:title] =  doc.css('title').text
