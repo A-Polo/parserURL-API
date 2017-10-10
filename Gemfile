@@ -10,6 +10,7 @@ gem 'puma', '~> 3.0'
 
 gem 'devise'
 gem 'devise_token_auth'
+gem 'bcrypt', '~> 3.1.7'
 
 gem 'omniauth'
 gem 'omniauth-github'
